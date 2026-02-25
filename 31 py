@@ -1,0 +1,8 @@
+import random
+
+random_1 = random.randint(1,2)
+
+if random_1 == 1:
+    print("tails ")
+elif random_1 == 2:
+    print("heads")
