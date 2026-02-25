@@ -1,0 +1,51 @@
+import random
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+list_1 = ["0","1","2"]
+random_choice = random.randint(0,2)
+print(list_1[random_choice])
+player_choice = input("chose 0 for rock. 1 for paper. 2 for scissors: ")
+if player_choice == "0" and random_choice == 1:
+    print(f"your choice is rock\n" +  rock + "computer choice is paper\n" + paper +"\n you loose")
+if player_choice == "1" and random_choice == 1:
+    print(f"your choice is paper\n" + paper + "computer choice is paper\n" + paper + "\n draw! try again")
+if player_choice == "2" and random_choice == 1:
+    print(f"your choice is scissors\n" + scissors + "computer choice is paper\n" + paper +"\nyou win!! ")
+
+if player_choice == "0" and random_choice == 0:
+    print(f"your choice is rock\n" +  rock + "computer choice is rock\n" + rock +"\n draw! try again")
+if player_choice == "1" and random_choice == 0:
+    print(f"your choice is paper\n" + paper + "computer choice is rock\n" + rock + "\n you win ")
+if player_choice == "2" and random_choice == 0:
+    print(f"your choice is scissors\n" + scissors + "computer choice is rock\n" + rock +"\nyou loose! ")
+
+if player_choice == "0" and random_choice == 2:
+    print(f"your choice is rock\n" +  rock + "computer choice is scissors\n" + scissors +"\n you win!")
+if player_choice == "1" and random_choice == 2:
+    print(f"your choice is paper\n" + paper + "computer choice is scissors\n" + scissors + "\n you loose!")
+if player_choice == "2" and random_choice == 2:
+    print(f"your choice is scissors\n" + scissors + "computer choice is scissors\n" + scissors +"\ndraw! try again ")
